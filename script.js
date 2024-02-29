@@ -1,6 +1,6 @@
 var guessnumber = document.getElementById("guessnumber");
 var result = document.getElementById("result");
-var randomNumber = Math.floor(Math.random()*10)+1
+var randomNumber = Math.floor(Math.random()*10)+1;
 var score = document.getElementById("score")
 var totalscore = 3;
 
@@ -9,6 +9,7 @@ console.log(randomNumber)
 
 function check(){
   var enterednumber = guessnumber.value;
+  
   if(randomNumber==enterednumber)
   {
     console.log("right")
@@ -16,6 +17,7 @@ function check(){
     // totalscore = totalscore +1;
     // score.textContent = "Score:"+totalscore;
     alert("You won");
+    
   }
   else{
     if(totalscore < 2){
@@ -25,8 +27,10 @@ function check(){
     }else{
     totalscore = totalscore -1;
     score.textContent = "Chance Remaing: "+totalscore;
-    result.textContent = "wrong"}
+    result.textContent = "wrong";
+    console.log("countcheck",totalscore);
     
+}
   }
 }
 
